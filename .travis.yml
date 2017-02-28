@@ -1,6 +1,6 @@
 language: node_js
 node_js: node
-install: "pip install b2"
+install: "pip install --user b2"
 script: "./backup.sh"
 env:
     global:
