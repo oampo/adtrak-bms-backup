@@ -9,6 +9,6 @@
   "author": "Joe Turner <joe@oampo.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "firebase-tools": "^3.3.0"
+    "firebase-tools": "^7.11.0"
   }
 }
