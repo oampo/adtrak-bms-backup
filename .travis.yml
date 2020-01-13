@@ -1,5 +1,5 @@
 language: node_js
-node_js: "7"
+node_js: "12"
 before_install: "pip install --user b2"
 script: "./backup.sh"
 env:
