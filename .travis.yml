@@ -4,6 +4,7 @@ addons:
   apt:
     packages:
       - python3
+      - python3-pip
 before_install: "pip3 install --user b2"
 script: "./backup.sh"
 env:
