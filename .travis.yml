@@ -1,6 +1,10 @@
 language: node_js
 node_js: "12"
-before_install: "pip install --user b2"
+addons:
+  apt:
+    packages:
+      - python3
+before_install: "pip3 install --user b2"
 script: "./backup.sh"
 env:
     global:
