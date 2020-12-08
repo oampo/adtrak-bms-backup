@@ -20,6 +20,10 @@ jobs:
           python-version: '3.x'
       - name: Install Node dependencies
         run: npm install
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install b2
       - name: Create backup
         run: ./backup.sh
         env:
