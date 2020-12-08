@@ -1,0 +1,26 @@
+name: Daily Backup
+on:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  backup:
+    name: Daily Backup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Create backup
+        run: ./backup.sh
+        env:
+          B2_ID: ${{ secrets.B2_ID }}
+          B2_KEY: ${{ secrets.B2_KEY }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
