@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
+      - name: Install Node dependencies
+        run: npm install
       - name: Create backup
         run: ./backup.sh
         env:
